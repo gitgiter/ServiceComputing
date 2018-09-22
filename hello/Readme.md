@@ -203,4 +203,4 @@ go test ./stringutil
 
 系列测试结果：
 
-![test](test.jpg)
+![test](test.png)
