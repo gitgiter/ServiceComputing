@@ -1,7 +1,8 @@
 package main
 
 import "fmt"
+import "github.com/gitgiter/ServiceComputing/stringutil"
 
 func main() {
-	fmt.Printf("hello, world\n")
+	fmt.Printf(stringutil.Reverse("\n!oG ,olleH"))
 }
