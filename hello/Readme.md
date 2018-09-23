@@ -6,10 +6,16 @@
 
 ---
 
-## 1. centos配置go环境
+## 1. 前期准备
+### 1.1 git使用
 可以参考我的另一篇博客
-- [csdn]()
-- [github]()
+- csdn: [Wonderful_sky](https://blog.csdn.net/Wonderful_sky/article/details/82824290)
+- github page: [gitgiter's blog](https://gitgiter.github.io/2018/09/17/MPAD-hw1-Git%E4%BD%BF%E7%94%A8%E5%92%8CAS%E9%85%8D%E7%BD%AE/)
+
+### 1.2 centos配置go环境
+可以参考我的另一篇博客
+- csdn: [Wonderful_sky](https://blog.csdn.net/Wonderful_sky/article/details/82825236)
+- github page: [gitgiter's blog](https://gitgiter.github.io/2018/09/23/golang%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/)
 
 ## 2. 基本概念补充
 ### 2.1 工作空间
@@ -124,6 +130,7 @@ go install hello
 ```
 
 直接run是可以直接输入helloworld的结果的；如果是安装之后，则可以直接在命令行输入hello执行hello，前提是bin目录已经加入环境变量中。
+
 
 ### 3.2 编写一个自定义包
 这里编写自定义包的目的是为了熟悉一下自定义包的流程，因此包的内容就没有过多的要求，所以我这里就直接采用教程文档里提供的例子。
