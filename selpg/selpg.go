@@ -220,6 +220,9 @@ func optionFD(args *selpgArgs, reader *bufio.Reader, writer io.WriteCloser) (pag
 				os.Exit(18)
 			}
 		}
+		if ch == '\f' {
+			pageCount++
+		}
 	}
 	return pageCount
 }
@@ -243,10 +246,11 @@ func optionLD(args *selpgArgs, reader *bufio.Reader, writer io.WriteCloser) (pag
 				os.Exit(20)
 			}
 		}
-		lineCount++
 		if lineCount >= args.length {
 			pageCount++
 			lineCount = 1
+		} else {
+			lineCount++
 		}
 	}
 	return pageCount
