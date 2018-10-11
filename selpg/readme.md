@@ -12,8 +12,8 @@ selpg是一个命令行工具，允许用户指定该程序从标准输入或从
 ---
 
 关于selpg的实现思路和测试以及用到的相关Linux命令行准则的知识可以参考我的博客
-- [gitgiter](https://gitgiter.github.io)
-- [csdn]()
+- [csdn：selpg-CLI实用程序](https://blog.csdn.net/Wonderful_sky/article/details/83021169)
+- [gitgiter：CLI实用程序之selpg](https://gitgiter.github.io/2018/10/11/SC-hw2-selpg/)
 
 ## 文件说明
 - selpg.go：核心功能文件，selpg功能的所有实现，包括错误处理
