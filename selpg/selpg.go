@@ -262,5 +262,5 @@ func main() {
 	checkArgs(args)
 	processData(args)
 	fmt.Println("================done!================")
-	fmt.Printf("%+v\n", args)
+	//fmt.Printf("%+v\n", args)
 }
