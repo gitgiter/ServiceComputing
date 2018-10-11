@@ -22,15 +22,13 @@ type selpgArgs struct {
 func inputArgs(args *selpgArgs) {
 	flag.IntVar(&(args.start), "s", -1, "start page")
 	flag.IntVar(&(args.end), "e", -1, "end page")
+	flag.IntVar(&(args.length), "l", -1, "page length")
 	flag.BoolVar(&(args.pageType), "f", false, "page type")
 	flag.StringVar(&(args.des), "d", "", "print destination")
-
-	ltype := flag.Int("l", -1, "page length")
 
 	flag.Parse()
 
 	// deal with -l and -f, especially -l 72 and -f
-	args.length = *ltype
 	if args.length != -1 && args.pageType == true {
 		fmt.Fprintf(os.Stderr, "-l Num and -f cannot be used together\n")
 		os.Exit(1)
@@ -67,20 +65,6 @@ func checkArgs(args *selpgArgs) {
 		fmt.Fprintf(os.Stderr, "invalid page length\n")
 		os.Exit(6)
 	}
-}
-
-func getReader(args *selpgArgs) (reader *bufio.Reader) {
-	stdin := os.Stdin
-	if args.filename != "" {
-		filein, err := os.Open(args.filename)
-		defer filein.Close()
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "failed to open file %s\n", args.filename)
-			os.Exit(7)
-		}
-		return bufio.NewReader(filein)
-	}
-	return bufio.NewReader(stdin)
 }
 
 func processData(args *selpgArgs) {
@@ -211,13 +195,13 @@ func optionFD(args *selpgArgs, reader *bufio.Reader, writer io.WriteCloser) (pag
 				break
 			}
 			fmt.Fprintf(os.Stderr, "failed to read byte\n")
-			os.Exit(17)
+			os.Exit(13)
 		}
 		if pageCount >= args.start && pageCount <= args.end {
 			_, writeErr := writer.Write([]byte{ch})
 			if writeErr != nil {
 				fmt.Fprintf(os.Stderr, "failed to write bytes\n")
-				os.Exit(18)
+				os.Exit(16)
 			}
 		}
 		if ch == '\f' {
@@ -237,13 +221,13 @@ func optionLD(args *selpgArgs, reader *bufio.Reader, writer io.WriteCloser) (pag
 				break
 			}
 			fmt.Fprintf(os.Stderr, "failed to read bytes\n")
-			os.Exit(19)
+			os.Exit(15)
 		}
 		if pageCount >= args.start && pageCount <= args.end {
 			_, writeErr := writer.Write(line)
 			if writeErr != nil {
 				fmt.Fprintf(os.Stderr, "failed to write bytes\n")
-				os.Exit(20)
+				os.Exit(16)
 			}
 		}
 		if lineCount >= args.length {
