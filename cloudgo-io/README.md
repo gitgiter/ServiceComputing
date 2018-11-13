@@ -40,18 +40,18 @@ http://localhost:yourport/unknown
 ```
 
 # 3、效果
-- 主界面
+- 主界面（背景来自我的github page）  
 ![](img/main.jpg)
-- 支持静态文件服务
-![](img/public.jpg)
+- 支持静态文件服务  
+![](img/public.jpg)  
 ![](img/css.jpg)
-- 支持简单的js访问（可跳转到静态资源界面）
-![](img/js.jpg)
+- 支持简单的js访问（可跳转到静态资源界面）  
+![](img/js.jpg)  
 ![](img/public.jpg)
-- 提交表单，并输出一个表格
-![](img/form.jpg)
+- 提交表单，并输出一个表格  
+![](img/form.jpg)  
 ![](img/table.jpg)
-- 对/unknow给出开发中的提示，返回码501
+- 对/unknow给出开发中的提示，返回码501  
 ![](img/unknown.jpg)
 
 # 3、其他
@@ -59,4 +59,3 @@ http://localhost:yourport/unknown
 - 实现细节详见博客
     - github page：[]()
     - csdn blog：[]()
-    
