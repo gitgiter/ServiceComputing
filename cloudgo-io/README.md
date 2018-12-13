@@ -57,5 +57,5 @@ http://localhost:yourport/unknown
 # 3、其他
 - 本程序使用了iris框架
 - 实现细节详见博客
-    - github page：[]()
-    - csdn blog：[]()
+    - github page：[https://gitgiter.github.io/2018/11/13/SC-hw4-cloudgo-io/](https://gitgiter.github.io/2018/11/13/SC-hw4-cloudgo-io/)
+    - csdn blog：[https://blog.csdn.net/Wonderful_sky/article/details/84036366](https://blog.csdn.net/Wonderful_sky/article/details/84036366)
